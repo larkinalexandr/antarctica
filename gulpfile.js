@@ -5,7 +5,6 @@ const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const server = require('browser-sync').create();
-const csso = require('gulp-csso');
 const rename = require('gulp-rename');
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
@@ -25,8 +24,7 @@ const css = () => {
       })]))
       .pipe(gcmq()) // выключите, если в проект импортятся шрифты через ссылку на внешний источник
       .pipe(gulp.dest('build/css'))
-      .pipe(csso())
-      .pipe(rename('style.min.css'))
+      .pipe(rename('style.css'))
       .pipe(sourcemap.write('.'))
       .pipe(gulp.dest('build/css'))
       .pipe(server.stream());
@@ -88,7 +86,7 @@ const clean = () => {
 const syncServer = () => {
   server.init({
     server: 'build/',
-    index: 'sitemap.html',
+    index: 'index.html',
     notify: false,
     open: true,
     cors: true,
