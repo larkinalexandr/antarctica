@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="UTF-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -13,7 +13,109 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<header class="header is-opened no-js">
 
+  <div class="header__wrapper">
+    <div class="header__logo">
+      <svg role="img" width="70" height="38" aria-label="Логотип компании.">
+        <use xlink:href="img/sprite_auto.svg#logo"></use>
+      </svg>
+    </div>
+    <button class="header__nav-button" type="button"><span class="visually-hidden">
+      открыть/закрыть - меню.
+    </span>
+      <svg class="header__nav-button-icon header__nav-button-icon--menu" width="24" height="12">
+        <use xlink:href="img/sprite_auto.svg#menu"></use>
+      </svg>
+      <svg class="header__nav-button-icon header__nav-button-icon--cross" width="13" height="13">
+        <use xlink:href="img/sprite_auto.svg#cross"></use>
+      </svg>
+    </button>
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        <li>
+          <a href="#">Преимущества</a>
+        </li>
+        <li>
+          <a href="#">Направления</a>
+        </li>
+        <li>
+          <a href="#">Ближайшие круизы</a>
+        </li>
+        <li>
+          <a href="#">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="header__image">
+    <picture>
+      <source type="image/webp" media="(max-width: 767px)"
+              srcset="img/content/Rectangle-m-1@1x.webp 1x, img/content/Rectangle-m-1@2x.webp 2x">
+      <source type="image/webp" media="(max-width: 1365px)"
+              srcset="img/content/Rectangle-t-1@1x.webp 1x, img/content/Rectangle-t-1@2x.webp 2x">
+      <source type="image/webp" srcset="img/content/Rectangle-d-1@1x.webp 1x, img/content/Rectangle-d-1@2x.webp 2x">
+      <source media="(max-width: 767px)"
+              srcset="img/content/Rectangle-m-1@1x.jpg 1x, img/content/Rectangle-m-1@2x.jpg 2x">
+      <source media="(max-width: 1365px)"
+              srcset="img/content/Rectangle-t-1@1x.jpg 1x, img/content/Rectangle-t-1@2x.jpg 2x">
+      <img src="img/content/Rectangle-d-1@1x.jpg" width="1366" height="658" alt="Арктика."
+              srcset="img/content/Rectangle-d-1@2x.jpg 2x">
+    </picture>
+  </div>
+  <div class="header__text-wrapper">
+    <h1>Круизы<br> в Антарктику</h1>
+    <p>Волшебный мир<br> айсбергов и пингвинов</p>
+  </div>
+</header>
+<footer class="footer">
+  <div class="footer__wrapper">
+    <div class="footer__logo">
+      <img src="img/svg/logo.svg" width="70" height="38" alt="Логотип компании.">
+    </div>
+    <div class="footer__nav">
+      <ul>
+        <li>
+          <a href="#">Преимущества </a>
+        </li>
+        <li>
+          <a href="#">Направления</a>
+        </li>
+        <li>
+          <a href="#">Ближайшие круизы</a>
+        </li>
+        <li>
+          <a href="#">Контакты</a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__social social">
+      <ul>
+        <li>
+          <a href="#">
+            <svg class="social__icon social__icon--facebook">
+              <use xlink:href="img/sprite_auto.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <svg class="social__icon social__icon--instagram">
+              <use xlink:href="img/sprite_auto.svg#instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <svg class="social__icon social__icon--twitter">
+              <use xlink:href="img/sprite_auto.svg#twiter"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
 <script src="js/vendor.js"></script>
 <script src="js/main.js"></script>
 </body>

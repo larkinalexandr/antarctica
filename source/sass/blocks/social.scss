@@ -1,0 +1,31 @@
+.social__icon {
+  &--facebook {
+    width: 11px;
+    height: 20px;
+
+    @include vp-1365 {
+      width: 9px;
+      height: 16px;
+    }
+  }
+
+  &--instagram {
+    width: 20px;
+    height: 20px;
+
+    @include vp-1365 {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &--twitter {
+    width: 20px;
+    height: 16px;
+
+    @include vp-1365 {
+      width: 16px;
+      height: 13px;
+    }
+  }
+}

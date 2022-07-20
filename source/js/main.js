@@ -44,3 +44,21 @@ window.addEventListener('DOMContentLoaded', () => {
 // breakpointChecker();
 
 // используйте .closest(el)
+
+
+const headerWrapper = document.querySelector('.header');
+const menuButton = document.querySelector('.header__nav-button');
+
+headerWrapper.classList.remove('no-js');
+headerWrapper.classList.remove('is-opened');
+headerWrapper.classList.add('is-closed');
+
+menuButton.addEventListener('click', () => {
+  if (headerWrapper.classList.contains('is-closed')) {
+    headerWrapper.classList.remove('is-closed');
+    headerWrapper.classList.add('is-opened');
+  } else {
+    headerWrapper.classList.remove('is-opened');
+    headerWrapper.classList.add('is-closed');
+  }
+});
