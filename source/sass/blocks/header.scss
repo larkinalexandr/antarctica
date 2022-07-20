@@ -132,7 +132,7 @@
 
   @include vp-767 {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     padding-top: 5px;
     grid-column: 3 / 4;
   }

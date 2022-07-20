@@ -48,3 +48,23 @@
   line-height: 22px;
   color: $color-default-dark;
 }
+
+@mixin footer-menu-desktop-typo {
+  font: {
+    family: $font-default;
+    weight: 500;
+    size: 16px;
+  };
+  line-height: 20px;
+  color: $color-default-light;
+}
+
+@mixin footer-menu-tablet-mobile-typo {
+  font: {
+    family: $font-default;
+    weight: 500;
+    size: 12px;
+  };
+  line-height: 15px;
+  color: $color-default-light;
+}
