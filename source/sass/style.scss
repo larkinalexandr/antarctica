@@ -10,12 +10,13 @@
 @import "mixins";
 @import "global/fonts";
 @import "global/reboot";
+@import "global/utils";
 
 
 // Blocks
 // ---------------------------------
 
-
+@import "blocks/header";
 // ---------------------------------
 
 // ❗❗❗ запрещено использовать изображения в css, касается как jpg \ png, так и svg

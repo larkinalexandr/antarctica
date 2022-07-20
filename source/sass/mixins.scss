@@ -17,3 +17,34 @@
     @content;
   }
 }
+
+//typography
+@mixin main-menu-desktop-typo {
+  font: {
+    family: $font-default;
+    weight: 500;
+    size: 16px;
+  };
+  line-height: 19px;
+  color: $color-default-light;
+}
+
+@mixin main-menu-tablet-typo {
+  font: {
+    family: $font-default;
+    weight: 500;
+    size: 14px;
+  };
+  line-height: 17px;
+  color: $color-default-light;
+}
+
+@mixin main-menu-mobile-typo {
+  font: {
+    family: $font-default;
+    weight: 500;
+    size: 18px;
+  };
+  line-height: 22px;
+  color: $color-default-dark;
+}
