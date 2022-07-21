@@ -1,0 +1,66 @@
+.greeting {
+  max-width: 1366px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.greeting__text-wrapper {
+  position: absolute;
+  top: 41%;
+  left: 199px;
+  color: $color-default-light;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+  h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 66px;
+  }
+
+  p {
+    margin: 12px 0;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  br {
+    display: none;
+  }
+
+  @include vp-1365 {
+    top: 42%;
+    left: 45px;
+    text-shadow: none;
+
+    h1 {
+      font-size: 50px;
+      line-height: 61px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  @include vp-767 {
+    top: 35%;
+    left: 5%;
+
+    h1 {
+      font-size: 36px;
+      line-height: 45px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    br {
+      display: inline;
+    }
+  }
+}
