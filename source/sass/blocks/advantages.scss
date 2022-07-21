@@ -1,0 +1,166 @@
+.advantages {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 110px 103px;
+  background-image: url("../img/advantages-bg-d@1x.jpg");
+
+  @include retina {
+    background-image: url("../img/advantages-bg-d@2x.jpg");
+  }
+
+  h2 {
+    margin: 0 0 49px 0;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 42px;
+    text-align: center;
+  }
+
+  h3 {
+    margin: 0 0 10px 0;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  p {
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @include vp-1365 {
+    padding: 89px 45px 100px;
+    background-image: url("../img/advantages-bg-t@1x.jpg");
+
+    @include retina {
+      background-image: url("../img/advantages-bg-t@2x.jpg");
+    }
+
+    h2 {
+      margin-bottom: 50px;
+      font-size: 26px;
+      line-height: 39px;
+    }
+
+    h3 {
+      line-height: 25px;
+    }
+  }
+
+  @include vp-767 {
+    background-image: url("../img/advantages-bg-m@1x.jpg");
+    padding: 61px 15px 65px;
+
+    @include retina {
+      background-image: url("../img/advantages-bg-m@2x.jpg");
+    }
+
+    h2 {
+      margin-bottom: 36px;
+      font-size: 24px;
+      line-height: 26px;
+    }
+  }
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+
+  @include vp-1365 {
+    gap: 30px;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.advantages__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 80px 30px 24px;
+  background-color: $color-default-light;
+  list-style-type: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 30px;
+    display: block;
+    background-repeat: no-repeat;
+  }
+
+  &--cruise {
+    &::before {
+      top: 30px;
+      width: 27px;
+      height: 32px;
+      background-image: url("../img/svg/ship.svg");
+      background-size: 27px 32px;
+    }
+  }
+
+  &--all-inclusive {
+    &::before {
+      top: 35px;
+      width: 38px;
+      height: 21px;
+      background-image: url("../img/svg/ai.svg");
+      background-size: 38px 21px;
+    }
+  }
+
+  &--zodiac-tours {
+    &::before {
+      top: 38px;
+      width: 42px;
+      height: 15px;
+      background-image: url("../img/svg/boat.svg");
+      background-size: 42px 15px;
+    }
+  }
+
+  @include vp-1365 {
+    padding: 70px 16px 20px 20px;
+
+    &::before {
+      left: 20px;
+    }
+
+    &--cruise {
+      &::before {
+        top: 25px;
+        width: 21px;
+        height: 26px;
+        background-size: 21px 26px;
+      }
+    }
+
+    &--all-inclusive {
+      &::before {
+        top: 29px;
+        width: 33px;
+        height: 19px;
+        background-size: 33px 19px;
+      }
+    }
+
+    &--zodiac-tours {
+      &::before {
+        top: 32px;
+        width: 38px;
+        height: 13px;
+        background-size: 38px 13px;
+      }
+    }
+  }
+}
