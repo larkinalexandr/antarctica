@@ -1,6 +1,35 @@
 <!DOCTYPE html>
 <html lang="ru" xmlns="http://www.w3.org/1999/html">
 <head>
+
+  <!-- Pixel Glass -->
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position:  50% 0;
+      /* По умолчанию показывается мобильный макет */
+      background-image: url( "./pixel-glass/mobile.png" );
+    }
+    /* Планшет */
+    @media ( min-width: 768px ) {
+      HTML {
+        /* Планшетный макет */
+        background-image: url( "./pixel-glass/tablet.png" );
+      }
+    }
+    /* Десктоп */
+    @media ( min-width: 1366px ) {
+      HTML {
+        /* Десктопный макет */
+        background-image: url( "./pixel-glass/desktop.png" );
+      }
+    }
+  </style>
+  <link href="./pixel-glass/styles.css" rel="stylesheet">
+  <script src="./pixel-glass/script.js"></script>
+  <!-- // Pixel Glass -->
+
+
   <meta charset="UTF-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -307,6 +336,28 @@
       </div>
     </li>
   </ul>
+</section>
+<section class="booking">
+  <div class="booking__wrapper">
+    <div class="booking__text-wrapper">
+      <h2>Раннее бронирование</h2>
+      <p>Забронируйте тур<br class="br br--mobile"> за 3-6 месяцев<br class="br br--desktop br--tablet"> до даты выезда и сэкономьте до 50%</p>
+    </div>
+    <form action="http://echo.htmlacademy.ru" method="get">
+      <h3>Оставьте заявку<br class="br br--mobile"> и мы свяжемся с вами<br class="br br--mobile"> в ближайшее время</h3>
+      <label class="visually-hidden" for="name">Имя.</label>
+      <input type="text" id="name" name="name" pattern="^([a-zA-ZА-Яа-яЁё '-])+$" placeholder="Имя">
+      <label class="visually-hidden" for="phone">Телефон.</label>
+      <input type="tel" id="phone" name="phone" pattern="^\+?(\d+-?)+\d+$" placeholder="Телефон" required>
+      <label class="visually-hidden" for="email">электронная почта.</label>
+      <input type="email" id="email" name="email" placeholder="Email">
+      <label>Я согласен на обработку<br class="br br--mobile"> моих персональных данных
+      <input class="visually-hidden" type="checkbox" checked required>
+      <span></span>
+      </label>
+      <button type="submit">Оставить заявку</button>
+    </form>
+  </div>
 </section>
 <footer class="footer">
   <div class="footer__wrapper">
