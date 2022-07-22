@@ -13,7 +13,12 @@
 
   &:hover,
   &:focus {
-    background-color: $color-default-dark;
+    background-color: #0925cc;
     color: $color-default-light;
+  }
+
+
+  &:active {
+    background-color: #05198f;
   }
 }
