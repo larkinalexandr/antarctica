@@ -1,0 +1,19 @@
+.button {
+  display: grid;
+  min-height: 40px;
+  place-content: center;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: $color-default-dark;
+  background-color: $color-default-light;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $color-default-dark;
+    color: $color-default-light;
+  }
+}
