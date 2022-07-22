@@ -13,7 +13,7 @@
   }
 
   @include vp-1365 {
-    padding: 100px 60px;
+    padding: 90px 60px 100px;
 
     h2 {
       font-size: 26px;
@@ -80,6 +80,13 @@
       display: grid;
     }
   }
+
+  @include vp-1365 {
+    img {
+      width: 309px;
+      height: auto;
+    }
+  }
 }
 
 .catalog__item-info {
@@ -123,6 +130,12 @@
   a {
     display: none;
   }
+
+  @include vp-1365 {
+    bottom: 27px;
+    padding-right: 35px;
+    padding-left: 35px;
+  }
 }
 
 .catalog__item:hover .catalog__item-info {
@@ -131,4 +144,8 @@
   padding: 29px 25px;
   background-color: $color-default-dark;
   z-index: 1;
+
+  @include vp-1365 {
+    padding: 29px 35px;
+  }
 }
