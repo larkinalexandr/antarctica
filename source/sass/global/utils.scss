@@ -11,33 +11,24 @@
   clip-path: inset(100%);
 }
 
-.br--tablet {
+.br {
   display: none;
+}
 
-  @include vp-1365 {
+.br--desktop {
+  @media (min-width: 1366px) {
     display: inline;
   }
+}
 
-  @include vp-767 {
-    display: none;
+.br--tablet {
+  @media (min-width: 768px) and (max-width: 1365px) {
+    display: inline;
   }
 }
 
 .br--mobile {
-  display: none;
-
   @include vp-767 {
     display: inline;
-  }
-}
-
-
-.br--desktop {
-  @include vp-1365 {
-    display: none;
-  }
-
-  @include vp-767 {
-    display: none;
   }
 }
