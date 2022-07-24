@@ -4,6 +4,7 @@
   left: 0;
   max-width: 1366px;
   z-index: 2;
+  margin: 0 auto;
 }
 
 .header.is-opened {
@@ -13,21 +14,12 @@
 }
 
 .header__wrapper {
-  //position: relative;
-  //top: 35px;
-  //bottom: 0;
-  //left: 103px;
-  //right: 103px;
   margin: 35px 103px 0;
   display: grid;
   grid-template-columns: 70px 1fr;
   grid-template-rows: min-content 1fr;
 
   @include vp-1365 {
-    //top: 30px;
-    //left: 45px;
-    //right: 45px;
-
     margin: 30px 45px 0;
   }
 
