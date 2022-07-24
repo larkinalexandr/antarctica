@@ -6,22 +6,24 @@
   <style>
     HTML {
       background-repeat: no-repeat;
-      background-position:  50% 0;
+      background-position: 50% 0;
       /* По умолчанию показывается мобильный макет */
-      background-image: url( "./pixel-glass/mobile.png" );
+      background-image: url("./pixel-glass/mobile.png");
     }
+
     /* Планшет */
     @media ( min-width: 768px ) {
       HTML {
         /* Планшетный макет */
-        background-image: url( "./pixel-glass/tablet.png" );
+        background-image: url("./pixel-glass/tablet.png");
       }
     }
+
     /* Десктоп */
     @media ( min-width: 1366px ) {
       HTML {
         /* Десктопный макет */
-        background-image: url( "./pixel-glass/desktop.png" );
+        background-image: url("./pixel-glass/desktop.png");
       }
     }
   </style>
@@ -341,10 +343,12 @@
   <div class="booking__wrapper">
     <div class="booking__text-wrapper">
       <h2>Раннее бронирование</h2>
-      <p>Забронируйте тур<br class="br br--mobile"> за 3-6 месяцев<br class="br br--desktop br--tablet"> до даты выезда и сэкономьте до 50%</p>
+      <p>Забронируйте тур<br class="br br--mobile"> за 3-6 месяцев<br class="br br--desktop br--tablet"> до даты выезда
+        и сэкономьте до 50%</p>
     </div>
-    <form action="http://echo.htmlacademy.ru" method="get">
-      <h3>Оставьте заявку<br class="br br--mobile"> и мы свяжемся с вами<br class="br br--mobile"> в ближайшее время</h3>
+    <form action="https://echo.htmlacademy.ru" method="get">
+      <h3>Оставьте заявку<br class="br br--mobile"> и мы свяжемся с вами<br class="br br--mobile"> в ближайшее время
+      </h3>
       <label class="visually-hidden" for="name">Имя.</label>
       <input type="text" id="name" name="name" pattern="^([a-zA-ZА-Яа-яЁё '-])+$" placeholder="Имя">
       <label class="visually-hidden" for="phone">Телефон.</label>
@@ -352,12 +356,27 @@
       <label class="visually-hidden" for="email">электронная почта.</label>
       <input type="email" id="email" name="email" placeholder="Email">
       <label>Я согласен на обработку<br class="br br--mobile"> моих персональных данных
-      <input class="visually-hidden" type="checkbox" checked required>
-      <span></span>
+        <input class="visually-hidden" type="checkbox" checked required>
+        <span></span>
       </label>
       <button type="submit">Оставить заявку</button>
     </form>
   </div>
+</section>
+<section class="contacts">
+  <h2 class="visually-hidden">Как нас найти.</h2>
+  <div class="contacts__wrapper">
+    <div class="contacts__map no-js">
+      <iframe class="contacts__map-image" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533207!2d30.320858716429004!3d59.938716481876256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1658660324702!5m2!1sen!2sru" width="560" height="306" allowfullscreen="" title="Как нас найти"></iframe>
+    </div>
+    <div class="contacts__text-wrapper">
+      <h3>У вас ещё остались вопросы или сомнения? Приезжайте к нам<br class="br br--tablet"> в офис и мы вам все
+        расскажем.</h3>
+      <p>г. Санкт Петербург,<br class="br br--tablet br--mobile"> ул. Большая Конюшенная, 19/8</p>
+      <a href="tel:88002000000">8-800-200-00-00</a>
+    </div>
+  </div>
+
 </section>
 <footer class="footer">
   <div class="footer__wrapper">
