@@ -5,6 +5,31 @@ import {initModals} from './modules/modals/init-modals';
 
 window.addEventListener('DOMContentLoaded', () => {
 
+  const headerWrapper = document.querySelector('.header');
+  const menuButton = document.querySelector('.header__nav-button');
+  const map = document.querySelector('.contacts__map');
+
+  if (headerWrapper) {
+    headerWrapper.classList.remove('no-js');
+    headerWrapper.classList.remove('is-opened');
+    headerWrapper.classList.add('is-closed');
+  }
+
+  if (map) {
+    map.classList.remove('no-js');
+  }
+
+  if (menuButton && headerWrapper) {
+    menuButton.addEventListener('click', () => {
+      if (headerWrapper.classList.contains('is-closed')) {
+        headerWrapper.classList.remove('is-closed');
+        headerWrapper.classList.add('is-opened');
+      } else {
+        headerWrapper.classList.remove('is-opened');
+        headerWrapper.classList.add('is-closed');
+      }
+    });
+  }
   // Utils
   // ---------------------------------
 
@@ -44,21 +69,3 @@ window.addEventListener('DOMContentLoaded', () => {
 // breakpointChecker();
 
 // используйте .closest(el)
-
-
-const headerWrapper = document.querySelector('.header');
-const menuButton = document.querySelector('.header__nav-button');
-
-headerWrapper.classList.remove('no-js');
-headerWrapper.classList.remove('is-opened');
-headerWrapper.classList.add('is-closed');
-
-menuButton.addEventListener('click', () => {
-  if (headerWrapper.classList.contains('is-closed')) {
-    headerWrapper.classList.remove('is-closed');
-    headerWrapper.classList.add('is-opened');
-  } else {
-    headerWrapper.classList.remove('is-opened');
-    headerWrapper.classList.add('is-closed');
-  }
-});
