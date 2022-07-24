@@ -3,12 +3,20 @@
   padding: 120px 103px;
   max-width: 1366px;
   box-sizing: border-box;
+
+  @include vp-1365 {
+    padding: 100px 45px;
+  }
 }
 
 .contacts__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 100px;
+
+  @include vp-1365 {
+    gap: 30px;
+  }
 }
 
 .contacts__text-wrapper {
@@ -60,6 +68,12 @@
       background-image: url("../img/svg/phone.svg");
     }
   }
+
+  @include vp-1365 {
+    h3 {
+      margin-bottom: 30px;
+    }
+  }
 }
 
 .contacts__map {
@@ -67,4 +81,9 @@
   height: 306px;
   border: none;
   background-color: $color-default-light;
+
+  @include vp-1365 {
+    width: 324px;
+    height: 335px;
+  }
 }
