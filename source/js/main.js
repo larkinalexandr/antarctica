@@ -7,7 +7,28 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const headerWrapper = document.querySelector('.header');
   const menuButton = document.querySelector('.header__nav-button');
+  const menuItem = document.querySelectorAll('.header__nav-list a');
   const map = document.querySelector('.contacts__map');
+
+  // close mobile-menu
+  const closeMenu = () => {
+    headerWrapper.classList.remove('is-opened');
+    headerWrapper.classList.add('is-closed');
+  };
+
+  // open mobile-menu
+  const openMenu = () => {
+    headerWrapper.classList.remove('is-closed');
+    headerWrapper.classList.add('is-opened');
+  };
+
+  if (menuItem.length > 0) {
+    for (let i = 0; i < menuItem.length; i++) {
+      menuItem[i].addEventListener('click', () => {
+        closeMenu();
+      });
+    }
+  }
 
   if (headerWrapper) {
     headerWrapper.classList.remove('no-js');
@@ -22,14 +43,13 @@ window.addEventListener('DOMContentLoaded', () => {
   if (menuButton && headerWrapper) {
     menuButton.addEventListener('click', () => {
       if (headerWrapper.classList.contains('is-closed')) {
-        headerWrapper.classList.remove('is-closed');
-        headerWrapper.classList.add('is-opened');
+        openMenu();
       } else {
-        headerWrapper.classList.remove('is-opened');
-        headerWrapper.classList.add('is-closed');
+        closeMenu();
       }
     });
   }
+
   // Utils
   // ---------------------------------
 
