@@ -15,12 +15,14 @@ window.addEventListener('DOMContentLoaded', () => {
   const closeMenu = () => {
     headerWrapper.classList.remove('is-opened');
     headerWrapper.classList.add('is-closed');
+    document.body.style.overflow = 'visible';
   };
 
   // open mobile-menu
   const openMenu = () => {
     headerWrapper.classList.remove('is-closed');
     headerWrapper.classList.add('is-opened');
+    document.body.style.overflow = 'hidden';
   };
 
   headerMenuWrapper.addEventListener('click', (evt) => {
