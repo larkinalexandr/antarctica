@@ -11,28 +11,6 @@
   clip-path: inset(100%);
 }
 
-.br {
-  display: none;
-}
-
-.br--desktop {
-  @media (min-width: 1366px) {
-    display: inline;
-  }
-}
-
-.br--tablet {
-  @media (min-width: 768px) and (max-width: 1365px) {
-    display: inline;
-  }
-}
-
-.br--mobile {
-  @include vp-767 {
-    display: inline;
-  }
-}
-
 html {
   scroll-behavior: smooth;
 }

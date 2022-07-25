@@ -219,35 +219,9 @@
   stroke: $color-default-light;
 }
 
-//  &:hover {
-//    stroke: $color-on-light-hover;
-//  }
-//
-//  &:active {
-//    stroke: $color-on-light-active;
-//  }
-//
-//  &:focus {
-//    stroke: $color-on-light-focus;
-//  }
-//}
-
 .header__nav-button-icon--cross {
   stroke: $color-default-dark;
 }
-
-//  &:hover {
-//    stroke: $color-on-dark-hover;
-//  }
-//
-//  &:active {
-//    stroke: $color-on-dark-active;
-//  }
-//
-//  &:focus {
-//    stroke: $color-on-dark-focus;
-//  }
-//}
 
 .header.is-opened .header__nav-button-icon--menu {
   display: none;
