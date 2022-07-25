@@ -5,7 +5,7 @@ import {initModals} from './modules/modals/init-modals';
 
 window.addEventListener('DOMContentLoaded', () => {
 
-  const headerWrapper = document.querySelector('.header');
+  const header = document.querySelector('.header');
   const menuButton = document.querySelector('.header__nav-button');
   const menuItem = document.querySelectorAll('.header__nav-list a');
   const headerMenuWrapper = document.querySelector('.header__menu-wrapper');
@@ -13,23 +13,25 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // close mobile-menu
   const closeMenu = () => {
-    headerWrapper.classList.remove('is-opened');
-    headerWrapper.classList.add('is-closed');
+    header.classList.remove('is-opened');
+    header.classList.add('is-closed');
     document.body.style.overflow = 'visible';
   };
 
   // open mobile-menu
   const openMenu = () => {
-    headerWrapper.classList.remove('is-closed');
-    headerWrapper.classList.add('is-opened');
+    header.classList.remove('is-closed');
+    header.classList.add('is-opened');
     document.body.style.overflow = 'hidden';
   };
 
-  headerMenuWrapper.addEventListener('click', (evt) => {
-    if (evt.target === headerMenuWrapper) {
-      closeMenu();
-    }
-  });
+  if (headerMenuWrapper) {
+    headerMenuWrapper.addEventListener('click', (evt) => {
+      if (evt.target === headerMenuWrapper) {
+        closeMenu();
+      }
+    });
+  }
 
   if (menuItem.length > 0) {
     for (let i = 0; i < menuItem.length; i++) {
@@ -39,19 +41,19 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  if (headerWrapper) {
-    headerWrapper.classList.remove('no-js');
-    headerWrapper.classList.remove('is-opened');
-    headerWrapper.classList.add('is-closed');
+  if (header) {
+    header.classList.remove('no-js');
+    header.classList.remove('is-opened');
+    header.classList.add('is-closed');
   }
 
   if (map) {
     map.classList.remove('no-js');
   }
 
-  if (menuButton && headerWrapper) {
+  if (menuButton && header) {
     menuButton.addEventListener('click', () => {
-      if (headerWrapper.classList.contains('is-closed')) {
+      if (header.classList.contains('is-closed')) {
         openMenu();
       } else {
         closeMenu();
