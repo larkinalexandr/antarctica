@@ -102,6 +102,7 @@
 
   a {
     @include main-menu-desktop-typo;
+    user-select: none;
 
     &:hover {
       color: $color-on-light-hover;

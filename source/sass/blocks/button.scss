@@ -10,6 +10,7 @@
   background-color: $color-default-light;
   box-sizing: border-box;
   cursor: pointer;
+  user-select: none;
 
   &:hover,
   &:focus {
