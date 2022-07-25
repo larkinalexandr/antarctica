@@ -78,7 +78,7 @@
     &:focus {
       color: $color-on-light-focus;
     }
-    
+
     @include footer-menu-desktop-typo;
   }
 
@@ -116,6 +116,22 @@
     padding: 0;
     margin: 0;
     list-style-type: none;
+  }
+
+  a {
+    fill: $color-default-light;
+
+    &:hover {
+      fill: $color-on-light-hover;
+    }
+
+    &:active {
+      fill: $color-on-light-active;
+    }
+
+    &:focus {
+      fill: $color-on-light-focus;
+    }
   }
 
   @include vp-1365 {

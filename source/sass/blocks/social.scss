@@ -1,18 +1,4 @@
 .social__icon {
-  fill: $color-default-light;
-
-  &:hover {
-    fill: $color-on-light-hover;
-  }
-
-  &:active {
-    fill: $color-on-light-active;
-  }
-
-  &:focus {
-    fill: $color-on-light-focus;
-  }
-
   &--facebook {
     width: 11px;
     height: 20px;
