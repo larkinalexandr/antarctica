@@ -50,8 +50,21 @@
     height: 43px;
     box-sizing: border-box;
     font-family: inherit;
+    color: $color-default-dark;
     border: none;
     margin-bottom: 21px;
+
+    &:hover {
+      outline: none;
+      box-shadow: inset 0 0 0 4px #8e98c4;
+      border-radius: 4px;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: inset 0 0 0 4px #5951f8;
+      border-radius: 4px;
+    }
   }
 
   input::placeholder {
