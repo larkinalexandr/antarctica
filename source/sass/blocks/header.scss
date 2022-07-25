@@ -163,12 +163,13 @@
     justify-content: flex-start;
     align-items: flex-start;
     height: 100%;
+    width: 100%;
     gap: 26px;
     padding-top: 36px;
     margin-left: 10px;
     display: none;
     max-height: 100vh;
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 }
 
@@ -186,6 +187,21 @@
   border: none;
   margin: 0;
   padding: 0;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+
+    svg {
+      stroke: $color-on-light-focus;
+    }
+  }
+
+  &:hover {
+    svg {
+      stroke: $color-on-dark-hover;
+    }
+  }
 
   @include vp-767 {
     display: flex;
@@ -198,6 +214,40 @@
 .header.no-js .header__nav-button {
   display: none;
 }
+
+.header__nav-button-icon--menu {
+  stroke: $color-default-light;
+}
+
+//  &:hover {
+//    stroke: $color-on-light-hover;
+//  }
+//
+//  &:active {
+//    stroke: $color-on-light-active;
+//  }
+//
+//  &:focus {
+//    stroke: $color-on-light-focus;
+//  }
+//}
+
+.header__nav-button-icon--cross {
+  stroke: $color-default-dark;
+}
+
+//  &:hover {
+//    stroke: $color-on-dark-hover;
+//  }
+//
+//  &:active {
+//    stroke: $color-on-dark-active;
+//  }
+//
+//  &:focus {
+//    stroke: $color-on-dark-focus;
+//  }
+//}
 
 .header.is-opened .header__nav-button-icon--menu {
   display: none;
