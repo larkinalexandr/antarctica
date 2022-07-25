@@ -40,11 +40,6 @@
     color: $color-default-light;
   }
 
-  label:last-of-type {
-    padding-left: 20px;
-    margin-bottom: 34px;
-  }
-
   input:not([type="checkbox"]) {
     padding-left: 16px;
     height: 43px;
@@ -93,6 +88,11 @@
     background-position: center;
     background-repeat: no-repeat;
   }
+
+  input[type="email"] {
+    margin-bottom: 14px;
+  }
+
 
   button {
     display: grid;
@@ -163,6 +163,30 @@
       margin-bottom: 23px;
     }
   }
+}
+
+.booking__terms-wrapper {
+  margin-bottom: 6px;
+
+  label {
+    padding-left: 24px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  @include vp-767 {
+    label {
+      padding-left: 28px;
+    }
+  }
+}
+
+.booking__terms-wrapper label:hover span {
+  box-shadow: inset 0 0 0 2px #8e98c4;
+}
+
+.booking__terms-wrapper input:focus + span {
+  box-shadow: inset 0 0 0 2px #5951f8;
 }
 
 .booking__text-wrapper {
