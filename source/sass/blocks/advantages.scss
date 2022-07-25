@@ -3,9 +3,13 @@
   margin: 0 auto;
   padding: 110px 103px 120px;
   background-image: url("../img/advantages-bg-d@1x.jpg");
+  background-color: #e3ecf6;
+  background-size: cover;
 
-  @include retina {
-    background-image: url("../img/advantages-bg-d@2x.jpg");
+  @media (min-width: 1366px) {
+    @include retina {
+      background-image: url("../img/advantages-bg-d@2x.jpg");
+    }
   }
 
   h2 {
