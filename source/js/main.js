@@ -5,11 +5,11 @@ import {initModals} from './modules/modals/init-modals';
 
 window.addEventListener('DOMContentLoaded', () => {
 
-  const headerWrapper = document.querySelector('.header');
-  const menuButton = document.querySelector('.header__nav-button');
-  const menuItem = document.querySelectorAll('.header__nav-list a');
-  const headerMenuWrapper = document.querySelector('.header__menu-wrapper');
-  const map = document.querySelector('.contacts__map');
+  // const headerWrapper = document.querySelector('.header');
+  // const menuButton = document.querySelector('.header__nav-button');
+  // const menuItem = document.querySelectorAll('.header__nav-list a');
+  // const headerMenuWrapper = document.querySelector('.header__menu-wrapper');
+  // const map = document.querySelector('.contacts__map');
 
   // close mobile-menu
   const closeMenu = () => {
