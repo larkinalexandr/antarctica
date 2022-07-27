@@ -1,13 +1,42 @@
 .greeting {
+  display: grid;
   max-width: 1366px;
   margin: 0 auto;
-  position: relative;
+  width: 100%;
+  min-height: 658px;
+  background-color: #0f7595;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../img/greeting-bg-d@1x.jpg");
+
+  @media (min-width: 1366px) {
+    @include retina {
+      background-image: url("../img/greeting-bg-d@2x.jpg");
+    }
+  }
+
+  @include vp-1365 {
+    min-height: 638px;
+    background-image: url("../img/greeting-bg-t@1x.jpg");
+
+    @include retina {
+      background-image: url("../img/greeting-bg-t@2x.jpg");
+    }
+  }
+
+  @include vp-767 {
+    min-height: 500px;
+    background-image: url("../img/greeting-bg-m@1x.jpg");
+
+    @include retina {
+      background-image: url("../img/greeting-bg-m@2x.jpg");
+    }
+  }
 }
 
 .greeting__text-wrapper {
-  position: absolute;
-  top: 41%;
-  left: 199px;
+  margin-left: 199px;
+  align-self: center;
   color: $color-default-light;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
@@ -30,8 +59,9 @@
   }
 
   @include vp-1365 {
-    top: 42%;
-    left: 45px;
+
+    margin-left: 45px;
+    margin-right: 45px;
     text-shadow: none;
 
     h1 {
@@ -46,8 +76,9 @@
   }
 
   @include vp-767 {
-    top: 35%;
-    left: 5%;
+    margin-top: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
 
     h1 {
       font-size: 36px;
