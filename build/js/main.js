@@ -105,7 +105,23 @@ window.addEventListener('DOMContentLoaded', function () {
   var menuButton = document.querySelector('.header__nav-button');
   var menuItem = document.querySelectorAll('.header__nav-list a');
   var headerMenuWrapper = document.querySelector('.header__menu-wrapper');
-  var map = document.querySelector('.contacts__map'); // close mobile-menu
+  var map = document.querySelector('.contacts__map');
+
+  if (window.localStorage) {
+    var elements = document.querySelectorAll('[name]');
+
+    for (var i = 0; i < elements.length; i++) {
+      (function (element) {
+        var name = element.getAttribute('name');
+        element.value = localStorage.getItem(name) || element.value;
+
+        element.onkeyup = function () {
+          localStorage.setItem(name, element.value);
+        };
+      })(elements[i]);
+    }
+  } // close mobile-menu
+
 
   var closeMenu = function closeMenu() {
     header.classList.remove('is-opened');
@@ -129,8 +145,8 @@ window.addEventListener('DOMContentLoaded', function () {
   }
 
   if (menuItem.length > 0) {
-    for (var i = 0; i < menuItem.length; i++) {
-      menuItem[i].addEventListener('click', function () {
+    for (var _i = 0; _i < menuItem.length; _i++) {
+      menuItem[_i].addEventListener('click', function () {
         closeMenu();
       });
     }
@@ -724,4 +740,3 @@ window.scrollLock = new ScrollLock();
 /***/ })
 
 /******/ });
-//# sourceMappingURL=main.js.map

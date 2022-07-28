@@ -11,6 +11,22 @@ window.addEventListener('DOMContentLoaded', () => {
   const headerMenuWrapper = document.querySelector('.header__menu-wrapper');
   const map = document.querySelector('.contacts__map');
 
+  if (window.localStorage) {
+    const elements = document.querySelectorAll('[name]');
+
+    for (let i = 0; i < elements.length; i++) {
+      (function(element) {
+        const name = element.getAttribute('name');
+
+        element.value = localStorage.getItem(name) || element.value;
+
+        element.onkeyup = function() {
+          localStorage.setItem(name, element.value);
+        };
+      })(elements[i]);
+    }
+  }
+
   // close mobile-menu
   const closeMenu = () => {
     header.classList.remove('is-opened');
