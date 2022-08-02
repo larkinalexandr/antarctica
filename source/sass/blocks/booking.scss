@@ -1,19 +1,36 @@
+.booking {
+  background-image: url("../img/Booking-bg-d@1x.jpg");
+  background-color: #e3ecf6;
+  background-size: cover;
+
+  @media (min-width: 1024px) {
+    @include retina {
+      background-image: url("../img/Booking-bg-d@2x.jpg");
+    }
+  }
+  @include vp-1365 {
+    background-image: url("../img/Booking-bg-t@1x.jpg");
+
+    @include retina {
+      background-image: url("../img/Booking-bg-t@2x.jpg");
+    }
+  }
+
+  @include vp-767 {
+    background-image: url("../img/Booking-bg-m@1x.jpg");
+
+    @include retina {
+      background-image: url("../img/Booking-bg-m@2x.jpg");
+    }
+  }
+}
+
 .booking__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 50px 163px;
   max-width: 1366px;
   margin: 0 auto;
-  background-image: url("../img/Booking-bg-d@1x.jpg");
-  background-color: #e3ecf6;
-  background-size: cover;
-
-  @media (min-width: 1366px) {
-    @include retina {
-      background-image: url("../img/Booking-bg-d@2x.jpg");
-    }
-  }
-
 
   h3 {
     margin: 0 0 29px;
@@ -30,6 +47,7 @@
     padding: 43px 50px 50px;
     margin-left: auto;
     background-color: $color-default-dark;
+    box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
   }
 
   label {
@@ -128,11 +146,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url("../img/Booking-bg-t@1x.jpg");
-
-    @include retina {
-      background-image: url("../img/Booking-bg-t@2x.jpg");
-    }
 
     form {
       padding-top: 43px;
@@ -144,11 +157,6 @@
 
   @include vp-767 {
     padding: 58px 15px 65px;
-    background-image: url("../img/Booking-bg-m@1x.jpg");
-
-    @include retina {
-      background-image: url("../img/Booking-bg-m@2x.jpg");
-    }
 
     form {
       padding: 33px 30px 40px;
