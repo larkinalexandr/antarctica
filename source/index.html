@@ -1,6 +1,37 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+
+  <!-- Pixel Glass -->
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      /* По умолчанию показывается мобильный макет */
+      background-image: url("./pixel-glass/mobile.png");
+    }
+
+    /* Планшет */
+    @media ( min-width: 768px ) {
+      HTML {
+        /* Планшетный макет */
+        background-image: url("./pixel-glass/tablet.png");
+      }
+    }
+
+    /* Десктоп */
+    @media ( min-width: 1024px ) {
+      HTML {
+        /* Десктопный макет */
+        background-image: url("./pixel-glass/desktop.png");
+      }
+    }
+  </style>
+  <link href="./pixel-glass/styles.css" rel="stylesheet">
+  <script src="./pixel-glass/script.js"></script>
+  <!-- // Pixel Glass -->
+
+
   <meta charset="UTF-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -50,9 +81,11 @@
   </div>
 </header>
 <section class="greeting">
-  <div class="greeting__text-wrapper">
-    <h1>Круизы в&nbsp;Антарктику</h1>
-    <p>Волшебный мир айсбергов&nbsp;и&nbsp;пингвинов</p>
+  <div class="greeting__wrapper">
+    <div class="greeting__text-wrapper">
+      <h1>Круизы в&nbsp;Антарктику</h1>
+      <p>Волшебный мир айсбергов&nbsp;и&nbsp;пингвинов</p>
+    </div>
   </div>
 </section>
 <section class="adventures">

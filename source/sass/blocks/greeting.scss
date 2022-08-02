@@ -1,9 +1,4 @@
 .greeting {
-  display: grid;
-  max-width: 1366px;
-  margin: 0 auto;
-  width: 100%;
-  min-height: 658px;
   background-color: #0f7595;
   background-position: center;
   background-size: cover;
@@ -32,6 +27,14 @@
       background-image: url("../img/greeting-bg-m@2x.jpg");
     }
   }
+}
+
+.greeting__wrapper {
+  display: grid;
+  max-width: 1366px;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 658px;
 }
 
 .greeting__text-wrapper {
