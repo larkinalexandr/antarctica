@@ -1,16 +1,35 @@
 .advantages {
-  max-width: 1366px;
-  margin: 0 auto;
-  padding: 110px 103px 120px;
   background-image: url("../img/advantages-bg-d@1x.jpg");
   background-color: #e3ecf6;
   background-size: cover;
 
-  @media (min-width: 1366px) {
+  @media (min-width: 1024px) {
     @include retina {
       background-image: url("../img/advantages-bg-d@2x.jpg");
     }
   }
+
+  @include vp-1365 {
+    background-image: url("../img/advantages-bg-t@1x.jpg");
+
+    @include retina {
+      background-image: url("../img/advantages-bg-t@2x.jpg");
+    }
+  }
+
+  @include vp-767 {
+    background-image: url("../img/advantages-bg-m@1x.jpg");
+
+    @include retina {
+      background-image: url("../img/advantages-bg-m@2x.jpg");
+    }
+  }
+}
+
+.advantages__wrapper {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 110px 103px 120px;
 
   h2 {
     margin: 0 0 49px 0;
@@ -36,11 +55,6 @@
 
   @include vp-1365 {
     padding: 89px 45px 100px;
-    background-image: url("../img/advantages-bg-t@1x.jpg");
-
-    @include retina {
-      background-image: url("../img/advantages-bg-t@2x.jpg");
-    }
 
     h2 {
       margin-bottom: 50px;
@@ -54,12 +68,7 @@
   }
 
   @include vp-767 {
-    background-image: url("../img/advantages-bg-m@1x.jpg");
     padding: 61px 15px 65px;
-
-    @include retina {
-      background-image: url("../img/advantages-bg-m@2x.jpg");
-    }
 
     h2 {
       margin-bottom: 36px;
