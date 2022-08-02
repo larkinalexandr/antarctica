@@ -680,8 +680,8 @@ html {
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
-  margin: 0;
-  gap: 33px;
+  margin: 0 0 5px 0;
+  gap: 34px;
 }
 
 .header__nav-button {
@@ -731,25 +731,26 @@ html {
 
 .footer {
   background-color: #011c40;
+  padding: 20px 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .footer__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
   padding: 0 103px;
+  -ms-grid-columns: 70px 1fr 120px;
+  grid-template-columns: 70px 1fr 120px;
+  gap: 40px;
   margin: 0 auto;
   max-width: 1366px;
-  min-height: 138px;
+  min-height: 98px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-.footer__logo {
-  margin-right: 40px;
 }
 
 .footer__logo img {
@@ -855,16 +856,19 @@ html {
 }
 
 .greeting {
+  background-color: #0f7595;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../img/greeting-bg-d@1x.jpg");
+}
+
+.greeting__wrapper {
   display: -ms-grid;
   display: grid;
   max-width: 1366px;
   margin: 0 auto;
   width: 100%;
   min-height: 658px;
-  background-color: #0f7595;
-  background-position: center;
-  background-size: cover;
-  background-image: url("../img/greeting-bg-d@1x.jpg");
 }
 
 .greeting__text-wrapper {
@@ -936,15 +940,18 @@ html {
 }
 
 .advantages {
-  max-width: 1366px;
-  margin: 0 auto;
-  padding: 110px 103px 120px;
   background-image: url("../img/advantages-bg-d@1x.jpg");
   background-color: #e3ecf6;
   background-size: cover;
 }
 
-.advantages h2 {
+.advantages__wrapper {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 110px 103px 120px;
+}
+
+.advantages__wrapper h2 {
   margin: 0 0 49px 0;
   font-weight: 600;
   font-size: 28px;
@@ -952,14 +959,14 @@ html {
   text-align: center;
 }
 
-.advantages h3 {
+.advantages__wrapper h3 {
   margin: 0 0 10px 0;
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
 }
 
-.advantages p {
+.advantages__wrapper p {
   margin: 0;
   font-weight: 400;
   font-size: 14px;
@@ -1133,10 +1140,11 @@ html {
 
 .catalog__item:hover .catalog__item-info {
   top: 0;
-  bottom: unset;
+  bottom: 0;
   padding: 29px 25px;
   background-color: #011c40;
   z-index: 1;
+  overflow: scroll;
 }
 
 .button {
@@ -1169,6 +1177,12 @@ html {
   background-color: #05198f;
 }
 
+.booking {
+  background-image: url("../img/Booking-bg-d@1x.jpg");
+  background-color: #e3ecf6;
+  background-size: cover;
+}
+
 .booking__wrapper {
   display: -ms-grid;
   display: grid;
@@ -1177,9 +1191,6 @@ html {
   padding: 50px 163px;
   max-width: 1366px;
   margin: 0 auto;
-  background-image: url("../img/Booking-bg-d@1x.jpg");
-  background-color: #e3ecf6;
-  background-size: cover;
 }
 
 .booking__wrapper h3 {
@@ -1202,6 +1213,8 @@ html {
   padding: 43px 50px 50px;
   margin-left: auto;
   background-color: #011c40;
+  -webkit-box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
+  box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
 }
 
 .booking__wrapper label {
@@ -1324,6 +1337,11 @@ html {
   margin-bottom: 34px;
 }
 
+.booking__terms-wrapper input {
+  top: 16px;
+  left: 10px;
+}
+
 .booking__terms-wrapper label {
   display: block;
   padding-left: 24px;
@@ -1345,11 +1363,22 @@ html {
 }
 
 .booking__text-wrapper {
-  margin: auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 8px;
 }
 
 .booking__text-wrapper h2 {
-  margin: 0;
+  margin: 0 0 8px 0;
+  padding-right: 20px;
   font-weight: 700;
   font-size: 40px;
   line-height: 60px;
@@ -1407,6 +1436,8 @@ html {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
 }
 
 .contacts__text-wrapper p::before,
@@ -1467,19 +1498,8 @@ html {
   width: 560px;
   height: 306px;
   background-image: url("../img/map-bg-d.jpg");
-}
-
-.contacts__map.no-js::before {
-  position: absolute;
-  top: 217px;
-  left: 249px;
-  content: "";
-  display: block;
-  width: 18px;
-  height: 22px;
-  background-image: url("/img/svg/address.svg");
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .contacts__map.no-js iframe {
@@ -1493,21 +1513,23 @@ html {
   }
 } */
 
-@media (min-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1366px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 1366px) and (min-resolution: 1.5dppx) {
-  .greeting {
-    background-image: url("../img/greeting-bg-d@2x.jpg");
-  }
-
+@media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1024px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 1024px) and (min-resolution: 1.5dppx) {
   .advantages {
     background-image: url("../img/advantages-bg-d@2x.jpg");
   }
 
-  .booking__wrapper {
+  .booking {
     background-image: url("../img/Booking-bg-d@2x.jpg");
   }
 }
 
-@media (max-width: 1365px) {
+@media (min-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1366px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 1366px) and (min-resolution: 1.5dppx) {
+  .greeting {
+    background-image: url("../img/greeting-bg-d@2x.jpg");
+  }
+}
+
+@media (max-width: 1023px) {
   .header__wrapper {
     margin: 30px 45px 0;
   }
@@ -1526,16 +1548,16 @@ html {
   }
 
   .header__nav-list {
-    gap: 23px;
+    gap: 24px;
+    margin-top: -2px;
   }
 
   .footer__wrapper {
-    min-height: 120px;
+    -ms-grid-columns: 38px 1fr 110px;
+    grid-template-columns: 38px 1fr 110px;
+    gap: 25px;
+    min-height: 80px;
     padding: 0 45px;
-  }
-
-  .footer__logo {
-    margin-right: 25px;
   }
 
   .footer__logo img {
@@ -1575,8 +1597,11 @@ html {
   }
 
   .greeting {
-    min-height: 638px;
     background-image: url("../img/greeting-bg-t@1x.jpg");
+  }
+
+  .greeting__wrapper {
+    min-height: 638px;
   }
 
   .greeting__text-wrapper {
@@ -1618,17 +1643,20 @@ html {
   }
 
   .advantages {
-    padding: 89px 45px 100px;
     background-image: url("../img/advantages-bg-t@1x.jpg");
   }
 
-  .advantages h2 {
+  .advantages__wrapper {
+    padding: 89px 45px 100px;
+  }
+
+  .advantages__wrapper h2 {
     margin-bottom: 50px;
     font-size: 26px;
     line-height: 39px;
   }
 
-  .advantages h3 {
+  .advantages__wrapper h3 {
     line-height: 25px;
   }
 
@@ -1679,6 +1707,14 @@ html {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .catalog__item:nth-child(even) {
+    margin-right: auto;
+  }
+
+  .catalog__item:nth-child(odd) {
+    margin-left: auto;
+  }
+
   .catalog__item img {
     width: 309px;
     height: auto;
@@ -1694,6 +1730,10 @@ html {
     padding: 29px 35px;
   }
 
+  .booking {
+    background-image: url("../img/Booking-bg-t@1x.jpg");
+  }
+
   .booking__wrapper {
     padding-top: 87px;
     padding-bottom: 100px;
@@ -1707,7 +1747,6 @@ html {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    background-image: url("../img/Booking-bg-t@1x.jpg");
   }
 
   .booking__wrapper form {
@@ -1722,6 +1761,7 @@ html {
   }
 
   .booking__text-wrapper h2 {
+    padding-right: 0;
     margin-bottom: 5px;
     text-align: center;
     font-size: 34px;
@@ -1759,14 +1799,9 @@ html {
     height: 335px;
     background-image: url("../img/map-bg-t.jpg");
   }
-
-  .contacts__map.no-js::before {
-    top: 218px;
-    left: 109px;
-  }
 }
 
-@media (max-width: 1365px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1365px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1365px) and (min-resolution: 1.5dppx) {
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 1.5dppx) {
   .greeting {
     background-image: url("../img/greeting-bg-t@2x.jpg");
   }
@@ -1775,7 +1810,7 @@ html {
     background-image: url("../img/advantages-bg-t@2x.jpg");
   }
 
-  .booking__wrapper {
+  .booking {
     background-image: url("../img/Booking-bg-t@2x.jpg");
   }
 }
@@ -1793,6 +1828,7 @@ html {
     top: 0;
     left: 0;
     right: 0;
+    background: rgba(0, 43, 102, 0.5);
   }
 
   .header.no-js .header__menu-wrapper {
@@ -1896,7 +1932,14 @@ html {
     grid-column: 3 / 4;
   }
 
+  .footer {
+    padding: 0;
+  }
+
   .footer__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -1904,6 +1947,8 @@ html {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
+    gap: 0;
+    min-height: 0;
     padding: 40px 15px;
   }
 
@@ -1930,8 +1975,11 @@ html {
   }
 
   .greeting {
-    min-height: 500px;
     background-image: url("../img/greeting-bg-m@1x.jpg");
+  }
+
+  .greeting__wrapper {
+    min-height: 500px;
   }
 
   .greeting__text-wrapper {
@@ -1973,16 +2021,19 @@ html {
 
   .advantages {
     background-image: url("../img/advantages-bg-m@1x.jpg");
+  }
+
+  .advantages__wrapper {
     padding: 61px 15px 65px;
   }
 
-  .advantages h2 {
+  .advantages__wrapper h2 {
     margin-bottom: 36px;
     font-size: 24px;
     line-height: 26px;
   }
 
-  .advantages h3 {
+  .advantages__wrapper h3 {
     padding-right: 37px;
   }
 
@@ -1998,6 +2049,7 @@ html {
 
   .catalog {
     padding: 55px 25px 65px;
+    margin: 0;
   }
 
   .catalog h2 {
@@ -2016,8 +2068,16 @@ html {
     flex-direction: column;
   }
 
+  .catalog__item:nth-child(even) {
+    margin-right: 0;
+  }
+
+  .catalog__item:nth-child(odd) {
+    margin-left: 0;
+  }
+
   .catalog__item img {
-    width: 270px;
+    width: 100%;
   }
 
   .catalog__item-info {
@@ -2030,6 +2090,10 @@ html {
     padding: 29px 25px;
   }
 
+  .booking {
+    background-image: url("../img/Booking-bg-m@1x.jpg");
+  }
+
   .booking__wrapper input[type="checkbox"] + span {
     left: -28px;
     top: 2px;
@@ -2039,7 +2103,6 @@ html {
 
   .booking__wrapper {
     padding: 58px 15px 65px;
-    background-image: url("../img/Booking-bg-m@1x.jpg");
   }
 
   .booking__wrapper form {
@@ -2064,6 +2127,11 @@ html {
   .booking__terms-wrapper {
     padding-left: 28px;
     margin-bottom: 26px;
+  }
+
+  .booking__terms-wrapper input {
+    top: 20px;
+    left: -16px;
   }
 
   .booking__terms-wrapper label {
@@ -2117,19 +2185,14 @@ html {
   }
 
   .contacts__map iframe {
-    width: 290px;
+    width: 100%;
     height: 316px;
   }
 
   .contacts__map.no-js {
-    width: 290px;
+    width: 100%;
     height: 316px;
     background-image: url("../img/map-bg-m.jpg");
-  }
-
-  .contacts__map.no-js::before {
-    top: 226px;
-    left: 112px;
   }
 }
 
@@ -2142,7 +2205,7 @@ html {
     background-image: url("../img/advantages-bg-m@2x.jpg");
   }
 
-  .booking__wrapper {
+  .booking {
     background-image: url("../img/Booking-bg-m@2x.jpg");
   }
 }
