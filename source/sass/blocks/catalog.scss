@@ -12,7 +12,7 @@
     text-align: center;
   }
 
-  @include vp-1365 {
+  @include vp-1023 {
     padding: 90px 60px 100px;
 
     h2 {
@@ -23,6 +23,7 @@
 
   @include vp-767 {
     padding: 55px 25px 65px;
+    margin: 0;
 
     h2 {
       margin-bottom: 31px;
@@ -39,7 +40,7 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -82,7 +83,15 @@
     }
   }
 
-  @include vp-1365 {
+  @include vp-1023 {
+    &:nth-child(even) {
+      margin-right: auto;
+    }
+
+    &:nth-child(odd) {
+      margin-left: auto;
+    }
+
     img {
       width: 309px;
       height: auto;
@@ -90,8 +99,16 @@
   }
 
   @include vp-767 {
+    &:nth-child(even) {
+      margin-right: 0;
+    }
+
+    &:nth-child(odd) {
+      margin-left: 0;
+    }
+
     img {
-      width: 270px;
+      width: 100%;
     }
   }
 }
@@ -138,7 +155,7 @@
     display: none;
   }
 
-  @include vp-1365 {
+  @include vp-1023 {
     bottom: 27px;
     padding-right: 35px;
     padding-left: 35px;
@@ -153,12 +170,13 @@
 
 .catalog__item:hover .catalog__item-info {
   top: 0;
-  bottom: unset;
+  bottom: 0;
   padding: 29px 25px;
   background-color: $color-default-dark;
   z-index: 1;
+  overflow: scroll;
 
-  @include vp-1365 {
+  @include vp-1023 {
     padding: 29px 35px;
   }
 

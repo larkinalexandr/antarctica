@@ -15,12 +15,12 @@ window.addEventListener('DOMContentLoaded', () => {
     const elements = document.querySelectorAll('[name]');
 
     for (let i = 0; i < elements.length; i++) {
-      (function(element) {
+      (function (element) {
         const name = element.getAttribute('name');
 
         element.value = localStorage.getItem(name) || element.value;
 
-        element.onkeyup = function() {
+        element.onkeyup = function () {
           localStorage.setItem(name, element.value);
         };
       })(elements[i]);

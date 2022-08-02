@@ -1,9 +1,4 @@
 .greeting {
-  display: grid;
-  max-width: 1366px;
-  margin: 0 auto;
-  width: 100%;
-  min-height: 658px;
   background-color: #0f7595;
   background-position: center;
   background-size: cover;
@@ -15,8 +10,7 @@
     }
   }
 
-  @include vp-1365 {
-    min-height: 638px;
+  @include vp-1023 {
     background-image: url("../img/greeting-bg-t@1x.jpg");
 
     @include retina {
@@ -25,12 +19,27 @@
   }
 
   @include vp-767 {
-    min-height: 500px;
     background-image: url("../img/greeting-bg-m@1x.jpg");
 
     @include retina {
       background-image: url("../img/greeting-bg-m@2x.jpg");
     }
+  }
+}
+
+.greeting__wrapper {
+  display: grid;
+  max-width: 1366px;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 658px;
+
+  @include vp-1023 {
+    min-height: 638px;
+  }
+
+  @include vp-767 {
+    min-height: 500px;
   }
 }
 
@@ -58,7 +67,7 @@
     display: none;
   }
 
-  @include vp-1365 {
+  @include vp-1023 {
 
     margin-left: 45px;
     margin-right: 45px;

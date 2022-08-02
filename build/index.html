@@ -1,6 +1,37 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+
+  <!-- Pixel Glass -->
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      /* По умолчанию показывается мобильный макет */
+      background-image: url("./pixel-glass/mobile.png");
+    }
+
+    /* Планшет */
+    @media ( min-width: 768px ) {
+      HTML {
+        /* Планшетный макет */
+        background-image: url("./pixel-glass/tablet.png");
+      }
+    }
+
+    /* Десктоп */
+    @media ( min-width: 1024px ) {
+      HTML {
+        /* Десктопный макет */
+        background-image: url("./pixel-glass/desktop.png");
+      }
+    }
+  </style>
+  <link href="./pixel-glass/styles.css" rel="stylesheet">
+  <script src="./pixel-glass/script.js"></script>
+  <!-- // Pixel Glass -->
+
+
   <meta charset="UTF-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -49,10 +80,13 @@
     </div>
   </div>
 </header>
+<main>
 <section class="greeting">
-  <div class="greeting__text-wrapper">
-    <h1>Круизы в&nbsp;Антарктику</h1>
-    <p>Волшебный мир айсбергов&nbsp;и&nbsp;пингвинов</p>
+  <div class="greeting__wrapper">
+    <div class="greeting__text-wrapper">
+      <h1>Круизы в&nbsp;Антарктику</h1>
+      <p>Волшебный мир айсбергов&nbsp;и&nbsp;пингвинов</p>
+    </div>
   </div>
 </section>
 <section class="adventures">
@@ -80,24 +114,26 @@
   </div>
 </section>
 <section class="advantages" id="advantages">
-  <h2>Преимущества</h2>
-  <ul class="advantages__list">
-    <li class="advantages__item advantages__item--cruise">
-      <h3>Небольшой круизный&nbsp;лайнер</h3>
-      <p>Круизный лайнер, рассчитанный всего лишь на&nbsp;300&nbsp;гостей, поможет избежать шума и&nbsp;очередей и&nbsp;даст
-        возможность насладиться видами и&nbsp;природой.</p>
-    </li>
-    <li class="advantages__item advantages__item--all-inclusive">
-      <h3>Система все&nbsp;включено</h3>
-      <p>Все наши круизы работают по&nbsp;системе “Все Включено”. Великолепные&nbsp;блюда и&nbsp;безлимитный бар
-        доступны для&nbsp;вас 24&nbsp;часа.</p>
-    </li>
-    <li class="advantages__item advantages__item--zodiac-tours">
-      <h3>Экскурсионные туры&nbsp;на&nbsp;Zodiac</h3>
-      <p>Экскурсионные туры к&nbsp;берегам Антарктиды совершаются на&nbsp;оборудованных лодках типа&nbsp;Zodiac в&nbsp;сопровождении
-        опытных экскурсоводов.</p>
-    </li>
-  </ul>
+  <div class="advantages__wrapper">
+    <h2>Преимущества</h2>
+    <ul class="advantages__list">
+      <li class="advantages__item advantages__item--cruise">
+        <h3>Небольшой круизный&nbsp;лайнер</h3>
+        <p>Круизный лайнер, рассчитанный всего лишь на&nbsp;300&nbsp;гостей, поможет избежать шума и&nbsp;очередей и&nbsp;даст
+          возможность насладиться видами и&nbsp;природой.</p>
+      </li>
+      <li class="advantages__item advantages__item--all-inclusive">
+        <h3>Система все&nbsp;включено</h3>
+        <p>Все наши круизы работают по&nbsp;системе “Все Включено”. Великолепные&nbsp;блюда и&nbsp;безлимитный бар
+          доступны для&nbsp;вас 24&nbsp;часа.</p>
+      </li>
+      <li class="advantages__item advantages__item--zodiac-tours">
+        <h3>Экскурсионные туры&nbsp;на&nbsp;Zodiac</h3>
+        <p>Экскурсионные туры к&nbsp;берегам Антарктиды совершаются на&nbsp;оборудованных лодках типа&nbsp;Zodiac в&nbsp;сопровождении
+          опытных экскурсоводов.</p>
+      </li>
+    </ul>
+  </div>
 </section>
 <section class="catalog" id="cruises">
   <h2>Ближайшие круизы</h2>
@@ -383,6 +419,7 @@
   </div>
 
 </section>
+</main>
 <footer class="footer">
   <div class="footer__wrapper">
     <div class="footer__logo">
