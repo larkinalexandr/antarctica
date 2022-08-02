@@ -10,7 +10,7 @@
     }
   }
 
-  @include vp-1365 {
+  @include vp-1023 {
     background-image: url("../img/greeting-bg-t@1x.jpg");
 
     @include retina {
@@ -34,7 +34,7 @@
   width: 100%;
   min-height: 658px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     min-height: 638px;
   }
 
@@ -67,7 +67,7 @@
     display: none;
   }
 
-  @include vp-1365 {
+  @include vp-1023 {
 
     margin-left: 45px;
     margin-right: 45px;

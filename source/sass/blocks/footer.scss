@@ -19,7 +19,7 @@
   align-items: center;
   box-sizing: border-box;
 
-  @include vp-1365 {
+  @include vp-1023 {
     grid-template-columns: 38px 1fr 110px;
     gap: 25px;
     min-height: 80px;
@@ -43,7 +43,7 @@
     height: 38px;
   }
 
-  @include vp-1365 {
+  @include vp-1023 {
 
     img {
       width: 38px;
@@ -94,7 +94,7 @@
     @include footer-menu-desktop-typo;
   }
 
-  @include vp-1365 {
+  @include vp-1023 {
     a {
       @include footer-menu-tablet-mobile-typo;
     }
@@ -147,7 +147,7 @@
     }
   }
 
-  @include vp-1365 {
+  @include vp-1023 {
     ul {
       gap: 23px;
     }

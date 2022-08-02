@@ -7,7 +7,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 40px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     padding: 100px 45px 94px;
     gap: 30px;
   }
@@ -40,7 +40,7 @@
     line-height: 24px;
   }
 
-  @include vp-1365 {
+  @include vp-1023 {
     justify-content: flex-start;
 
     h2 {

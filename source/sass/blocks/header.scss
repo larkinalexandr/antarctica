@@ -39,7 +39,7 @@
   grid-template-columns: 70px 1fr;
   grid-template-rows: min-content 1fr;
 
-  @include vp-1365 {
+  @include vp-1023 {
     margin: 30px 45px 0;
   }
 
@@ -73,7 +73,7 @@
     height: 38px;
   }
 
-  @include vp-1365 {
+  @include vp-1023 {
     svg {
       width: 38px;
       height: auto;
@@ -120,7 +120,7 @@
     }
   }
 
-  @include vp-1365 {
+  @include vp-1023 {
     a {
       @include main-menu-tablet-typo;
     }
@@ -156,7 +156,7 @@
   margin: 0 0 5px 0;
   gap: 34px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     gap: 24px;
     margin-top: -2px;
   }
