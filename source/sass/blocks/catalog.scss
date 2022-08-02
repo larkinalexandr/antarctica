@@ -154,10 +154,11 @@
 
 .catalog__item:hover .catalog__item-info {
   top: 0;
-  bottom: unset;
+  bottom: 0;
   padding: 29px 25px;
   background-color: $color-default-dark;
   z-index: 1;
+  overflow: scroll;
 
   @include vp-1365 {
     padding: 29px 35px;
