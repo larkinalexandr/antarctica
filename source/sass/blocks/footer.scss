@@ -11,7 +11,7 @@
 .footer__wrapper {
   display: grid;
   padding: 0 103px;
-  grid-template-columns: 70px 1fr 116px;
+  grid-template-columns: 70px 1fr 120px;
   gap: 40px;
   margin: 0 auto;
   max-width: 1366px;
@@ -20,7 +20,7 @@
   box-sizing: border-box;
 
   @include vp-1023 {
-    grid-template-columns: 38px 1fr 94px;
+    grid-template-columns: 38px 1fr 110px;
     gap: 25px;
     min-height: 80px;
     padding: 0 45px;
@@ -122,15 +122,11 @@
 
 .footer__social {
   margin-left: auto;
-  width: 100%;
-  outline: 1px solid red;
-  outline-offset: -1px;
 
   ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 28px;
-    row-gap: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
     padding: 0;
     margin: 10px 0 0 0;
   }
@@ -139,8 +135,6 @@
     padding: 0;
     margin: 0;
     list-style-type: none;
-    display: flex;
-    justify-content: flex-end;
   }
 
   a {
@@ -162,21 +156,11 @@
 
   @include vp-1023 {
     ul {
-      column-gap: 23px;
+      gap: 23px;
     }
   }
 
   @include vp-767 {
     margin-left: 0;
-
-    ul {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0;
-    }
-
-    li {
-      margin-right: 23px;
-    }
   }
 }
