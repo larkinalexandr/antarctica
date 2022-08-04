@@ -96,6 +96,7 @@
   @include vp-767 {
     display: flex;
     flex-direction: column;
+    gap: 0;
   }
 }
 
@@ -178,6 +179,12 @@
         height: 13px;
         background-size: 38px 13px;
       }
+    }
+  }
+
+  @include vp-767 {
+    &:not(:last-child) {
+      margin-bottom: 30px;
     }
   }
 }
