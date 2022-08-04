@@ -63,7 +63,6 @@
   ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 33px;
     padding: 0;
     margin: 0 auto 0 0;
   }
@@ -72,6 +71,10 @@
     padding: 0;
     margin: 0;
     list-style-type: none;
+
+    &:not(:last-child) {
+      margin-right: 33px;
+    }
   }
 
   a {
@@ -93,12 +96,13 @@
   }
 
   @include vp-1023 {
+    li {
+      &:not(:last-child) {
+        margin-right: 23px;
+      }
+    }
     a {
       @include footer-menu-tablet-mobile-typo;
-    }
-
-    ul {
-      gap: 23px;
     }
   }
 
@@ -106,7 +110,12 @@
     ul {
       flex-direction: column;
       margin-bottom: 11px;
-      gap: 8px;
+    }
+
+    li {
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
     }
   }
 }
