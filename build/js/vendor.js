@@ -98,4 +98,3 @@
 /***/ })
 
 /******/ });
-//# sourceMappingURL=vendor.js.map

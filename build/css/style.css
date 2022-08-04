@@ -681,7 +681,10 @@ html {
   align-items: center;
   padding: 0;
   margin: 0 0 5px 0;
-  gap: 34px;
+}
+
+.header__nav-list li:not(:last-child) {
+  margin-right: 34px;
 }
 
 .header__nav-button {
@@ -740,8 +743,8 @@ html {
   display: -ms-grid;
   display: grid;
   padding: 0 103px;
-  -ms-grid-columns: 70px 1fr 120px;
-  grid-template-columns: 70px 1fr 120px;
+  -ms-grid-columns: 70px 1fr 116px;
+  grid-template-columns: 70px 1fr 116px;
   gap: 40px;
   margin: 0 auto;
   max-width: 1366px;
@@ -764,7 +767,6 @@ html {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  gap: 33px;
   padding: 0;
   margin: 0 auto 0 0;
 }
@@ -773,6 +775,10 @@ html {
   padding: 0;
   margin: 0;
   list-style-type: none;
+}
+
+.footer__nav li:not(:last-child) {
+  margin-right: 33px;
 }
 
 .footer__nav a {
@@ -801,15 +807,18 @@ html {
 
 .footer__social {
   margin-left: auto;
+  width: 100%;
 }
 
 .footer__social ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  gap: 28px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 28px;
+  -moz-column-gap: 28px;
+  column-gap: 28px;
+  row-gap: 8px;
   padding: 0;
   margin: 10px 0 0 0;
 }
@@ -818,6 +827,12 @@ html {
   padding: 0;
   margin: 0;
   list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 .footer__social a {
@@ -1549,13 +1564,16 @@ html {
   }
 
   .header__nav-list {
-    gap: 24px;
     margin-top: -2px;
   }
 
+  .header__nav-list li:not(:last-child) {
+    margin-right: 24px;
+  }
+
   .footer__wrapper {
-    -ms-grid-columns: 38px 1fr 110px;
-    grid-template-columns: 38px 1fr 110px;
+    -ms-grid-columns: 38px 1fr 94px;
+    grid-template-columns: 38px 1fr 94px;
     gap: 25px;
     min-height: 80px;
     padding: 0 45px;
@@ -1566,6 +1584,10 @@ html {
     height: 20px;
   }
 
+  .footer__nav li:not(:last-child) {
+    margin-right: 23px;
+  }
+
   .footer__nav a {
     font-family: "Montserrat", "Arial", sans-serif;
     font-weight: 500;
@@ -1574,12 +1596,10 @@ html {
     color: #f9fbfd;
   }
 
-  .footer__nav ul {
-    gap: 23px;
-  }
-
   .footer__social ul {
-    gap: 23px;
+    -webkit-column-gap: 23px;
+    -moz-column-gap: 23px;
+    column-gap: 23px;
   }
 
   .social__icon--facebook {
@@ -1905,12 +1925,15 @@ html {
     align-items: flex-start;
     height: 100%;
     width: 100%;
-    gap: 26px;
     padding-top: 36px;
     margin-left: 10px;
     display: none;
     max-height: 100vh;
     overflow-y: auto;
+  }
+
+  .header__nav-list li:not(:last-child) {
+    margin-bottom: 26px;
   }
 
   .header.is-opened .header__nav-list {
@@ -1969,11 +1992,27 @@ html {
     -ms-flex-direction: column;
     flex-direction: column;
     margin-bottom: 11px;
-    gap: 8px;
+  }
+
+  .footer__nav li:not(:last-child) {
+    margin-bottom: 8px;
   }
 
   .footer__social {
     margin-left: 0;
+  }
+
+  .footer__social ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .footer__social li {
+    margin-right: 23px;
   }
 
   .greeting {
@@ -2012,8 +2051,12 @@ html {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    gap: 35px;
+    gap: 0;
     padding: 67px 15px 65px;
+  }
+
+  .adventures__text-wrapper {
+    margin-bottom: 35px;
   }
 
   .adventures__text-wrapper h2 {
@@ -2047,6 +2090,11 @@ html {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    gap: 0;
+  }
+
+  .advantages__item:not(:last-child) {
+    margin-bottom: 30px;
   }
 
   .catalog {
@@ -2064,6 +2112,7 @@ html {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    gap: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -2076,6 +2125,10 @@ html {
 
   .catalog__item:nth-child(odd) {
     margin-left: 0;
+  }
+
+  .catalog__item:not(:last-child) {
+    margin-bottom: 30px;
   }
 
   .catalog__item img {
